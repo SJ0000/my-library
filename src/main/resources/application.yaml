@@ -1,1 +1,18 @@
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2
+  datasource:
+    url: jdbc:h2:mem:test
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+
+kakao-open-api:
+  rest-api-key: e6655a4deee04490bcdbbe7faab5a3fb
+
+
+
 
