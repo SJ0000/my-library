@@ -36,5 +36,9 @@ out/
 ### VS Code ###
 .vscode/
 
+### Mac ###
+*.DS_Store
+
+
 ### my ####
 application.yaml
