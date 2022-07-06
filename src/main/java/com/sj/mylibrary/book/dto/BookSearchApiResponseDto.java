@@ -10,6 +10,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Optional;
 
 @Getter
 @Setter
@@ -50,5 +51,18 @@ public class BookSearchApiResponseDto {
         private Integer salePrice;
         private String thumbnail;
         private String status;
+
+        public String parseIsbn(){
+            if(isbn == null)
+                return null;
+            if(isbn.length() == 10 || isbn.length()==13)
+                return isbn;
+
+            String[] isbns = isbn.split(" ");
+            if(isbns[0].length()==13)
+                return isbns[0];
+
+            return isbns[1];
+        }
     }
 }
