@@ -8,8 +8,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 @SpringBootTest
 @Slf4j
 class BookServiceTest {
@@ -18,7 +16,7 @@ class BookServiceTest {
 
     @Test
     void searchByTitle() {
-        List<Book> result = bookService.searchByTitle("DOG");
+        List<Book> result = bookService.searchRequestForApi("DOG");
 
         for(Book book : result){
             log.info("book = {} {} {} {}",book.getName(),book.getAuthor(),book.getIsbn(),book.getImagePath());
